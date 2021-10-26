@@ -3,13 +3,9 @@ package project1;
 import java.util.Scanner;
 
 import project1.ver04.PhoneBookManager;
+import project1.ver05.Menuitem;
 
-interface select
-{
-	int input = 1, search = 2, delete = 3, showAllData = 4, exit = 5;
-}
-
-public class PhoneBookVer05
+public class PhoneBookVer05 implements Menuitem
 {
 	public static void main(String[] args)
 	{
@@ -25,17 +21,19 @@ public class PhoneBookVer05
 			System.out.print("옵션을 선택하세요 : ");
 			int selectNum = scanner.nextInt();
 			
+			
+			
 			switch (selectNum)
 			{
-			case select.input :
+			case input:
 				phone.dataInput();		break;
-			case select.search :
+			case search :
 				phone.dataSearch();		break;
-			case select.delete :
+			case delete :
 				phone.dataDelete();		break;
-			case select.showAllData :
+			case showAllData :
 				phone.showAllData();	break;
-			case select.exit : 
+			case exit : 
 				System.out.println("프로그램을 종료합니다.");
 				return;
 			}

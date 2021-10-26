@@ -4,12 +4,7 @@ import java.util.Scanner;
 
 import project1.ver04.PhoneInfo;
 
-interface choice
-{
-	int general = 1, college = 2, company = 3;
-}
-
-public class PhoneBookManager
+public class PhoneBookManager implements SubMenuitem
 {
 	public project1.ver05.PhoneInfo[] friends;
 	public int index;
@@ -47,7 +42,7 @@ public class PhoneBookManager
 		
 		switch (select)
 		{
-			case choice.general :
+			case general :
 			{
 				System.out.print("이    름 : ");
 				scanner.nextLine();
@@ -59,7 +54,7 @@ public class PhoneBookManager
 				friends[index++] = friend;
 				break;
 			}
-			case choice.college :
+			case college :
 			{
 				System.out.print("이    름 : ");
 				scanner.nextLine();
@@ -75,7 +70,7 @@ public class PhoneBookManager
 				friends[index++] = school;
 				break;
 			}
-			case choice.company :
+			case colleague :
 			{
 				System.out.print("이    름 : ");
 				scanner.nextLine();

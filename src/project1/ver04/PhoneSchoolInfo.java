@@ -13,7 +13,7 @@ public class PhoneSchoolInfo extends PhoneInfo
 	}
 	
 	@Override
-	public void schoolData()
+	public void showData()
 	{
 		System.out.println("---- 대학교 친구 정보 ----");
 		super.showData();

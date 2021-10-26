@@ -11,23 +11,23 @@ interface choice
 
 public class PhoneBookManager
 {
-	public PhoneInfo[] friends;
+	public project1.ver05.PhoneInfo[] friends;
 	public int index;
 	
 	public PhoneBookManager(int num)
 	{
-		friends = new PhoneInfo[num];
+		friends = new project1.ver05.PhoneInfo[num];
 		index = 0;
 	}
 	
 	public void printMenu()
 	{
-		System.out.println("■■ 선택하세요 ■■");
-		System.out.println("1. 데이터 입력");
-		System.out.println("2. 데이터 검색");		
-		System.out.println("3. 데이터 삭제");		
-		System.out.println("4. 주소록 출력");		
-		System.out.println("5. 프로그램 종료");
+		System.out.println("■■■■■■ 옵션 ■■■■■■");
+		System.out.println("■ 1. 데이터 입력 ■");
+		System.out.println("■ 2. 데이터 검색 ■");		
+		System.out.println("■ 3. 데이터 삭제 ■");		
+		System.out.println("■ 4. 주소록 출력 ■");		
+		System.out.println("■ 5. 종       료 ■");
 	}
 	
 	public void dataInput()
@@ -37,10 +37,12 @@ public class PhoneBookManager
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("■■ 선택하세요 ■■");
-		System.out.println("1. 일반");
-		System.out.println("2. 동창");		
-		System.out.println("3. 회사");
+		System.out.println("■■■■■■ 옵션 ■■■■■■");
+		System.out.println("■■■■ 1. 일 반 ■■■■");
+		System.out.println("■■■■ 2. 동 창 ■■■■");		
+		System.out.println("■■■■ 3. 회 사 ■■■■");
+		System.out.println("■■■■■■■■■■■■■■■■■■");
+		System.out.print("옵션을 선택하세요 : ");
 		int select = scanner.nextInt();
 		
 		switch (select)
@@ -48,19 +50,20 @@ public class PhoneBookManager
 			case choice.general :
 			{
 				System.out.print("이    름 : ");
-				name = scanner.nextLine();
 				scanner.nextLine();
+				name = scanner.nextLine();
 				System.out.print("전화번호 : ");
 				phoneNumber = scanner.nextLine();
-				sysout
+				project1.ver05.PhoneInfo friend
+					= new project1.ver05.PhoneInfo(name, phoneNumber);
 				friends[index++] = friend;
 				break;
 			}
 			case choice.college :
 			{
 				System.out.print("이    름 : ");
-				name = scanner.nextLine();
 				scanner.nextLine();
+				name = scanner.nextLine();
 				System.out.print("전화번호 : ");
 				phoneNumber = scanner.nextLine();
 				System.out.print("전    공 : ");
@@ -75,8 +78,8 @@ public class PhoneBookManager
 			case choice.company :
 			{
 				System.out.print("이    름 : ");
-				name = scanner.nextLine();
 				scanner.nextLine();
+				name = scanner.nextLine();
 				System.out.print("전화번호 : ");
 				phoneNumber = scanner.nextLine();
 				System.out.print("회 사 명 : ");

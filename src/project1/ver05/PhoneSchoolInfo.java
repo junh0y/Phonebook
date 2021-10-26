@@ -3,7 +3,7 @@ package project1.ver05;
 public class PhoneSchoolInfo extends PhoneInfo
 {
 	String subject;
-	int grade;
+	int grade;	
 	
 	public PhoneSchoolInfo(String name, String phoneNumber, String subject, int grade)
 	{

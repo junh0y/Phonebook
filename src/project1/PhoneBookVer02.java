@@ -10,12 +10,13 @@ public class PhoneBookVer02
 	{
 		while (true)
 		{
-			System.out.println("---선택하세요---");
-			System.out.println("1. 데이터 입력");
-			System.out.println("2. 프로그램 종료");		
+			System.out.println("■■■■■■ 옵션 ■■■■■■");
+			System.out.println("■ 1. 데이터 입력 ■");
+			System.out.println("■ 2. 종       료 ■ ");		
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("선택 : ");
-
+			System.out.println("■■■■■■■■■■■■■■■■■■");
+			System.out.print("옵션을 선택하세요 : ");
+			
 			int selectNum = scanner.nextInt();
 			if (selectNum == 1)
 			{

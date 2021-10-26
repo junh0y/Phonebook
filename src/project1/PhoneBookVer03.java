@@ -16,7 +16,8 @@ public class PhoneBookVer03
 			phone.printMenu();
 			
 			Scanner scanner = new Scanner(System.in);		
-			System.out.print("선택 : ");
+			System.out.println("■■■■■■■■■■■■■■■■■■");
+			System.out.print("옵션을 선택하세요 : ");
 			int selectNum = scanner.nextInt();
 			
 			switch (selectNum)

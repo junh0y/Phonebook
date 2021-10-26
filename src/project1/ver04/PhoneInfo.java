@@ -16,14 +16,4 @@ public class PhoneInfo
 		System.out.println("이    름 : " + name);
 		System.out.println("전화번호 : " + phoneNumber);
 	}
-	
-	public void schoolData()
-	{
-		
-	}
-	
-	public void companyData()
-	{
-		
-	}
 }

@@ -34,13 +34,13 @@ public class PhoneBookManager implements SubMenuitem
 	
 	public void printMenu()
 	{
-		System.out.println("■■■■■■ 옵션 ■■■■■■");
-		System.out.println("■ 1. 데이터 입력 ■");
-		System.out.println("■ 2. 데이터 검색 ■");		
-		System.out.println("■ 3. 데이터 삭제 ■");		
-		System.out.println("■ 4. 데이터 출력 ■");		
-		System.out.println("■ 5. 데이터 저장 ■");		
-		System.out.println("■ 6. 종       료 ■");
+		System.out.println("■■■■■■■■■■■■■■ 옵 션 ■■■■■■■■■■■■■■");
+		System.out.println("■         1.  데이터 입력         ■");
+		System.out.println("■         2.  데이터 검색         ■");		
+		System.out.println("■         3.  데이터 삭제         ■");		
+		System.out.println("■         4.  데이터 출력         ■");		
+		System.out.println("■         5.  데이터 저장         ■");		
+		System.out.println("■         6.  종       료         ■");
 	}
 	
 	public void dataInput()
@@ -49,13 +49,12 @@ public class PhoneBookManager implements SubMenuitem
 		int grade;
 		
 		Scanner scanner = new Scanner(System.in);
-		
-		System.out.println("■■■■■■ 옵션 ■■■■■■");
-		System.out.println("■    1. 일 반    ■");
-		System.out.println("■    2. 동 창    ■");		
-		System.out.println("■    3. 회 사    ■");
-		System.out.println("■■■■■■■■■■■■■■■■■■");
-		System.out.print("옵션을 선택하세요 : ");
+		System.out.println("■■■■■■■■■■■■■■ 옵 션 ■■■■■■■■■■■■■■");
+		System.out.println("■             1. 일반             ■");
+		System.out.println("■             2. 동창             ■");		
+		System.out.println("■             3. 회사             ■");
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		System.out.print("――――――――――――――――옵션을 선택하세요 : ");
 		int select = scanner.nextInt();
 		
 		switch (select)
@@ -75,19 +74,19 @@ public class PhoneBookManager implements SubMenuitem
 				
 				if(isFind == false)
 				{
-					System.out.println("이미 저장된 데이터입니다. ");
-					System.out.println("덮어 쓸까요? (Y/N 입력) : ");
+					System.out.println("―――――이미 저장된 데이터입니다.―――――");
+					System.out.println("――――――――――덮어 쓸까요? (Y/N 입력) : ");
 					String choice = scanner.nextLine();
 					
 					if (choice.equalsIgnoreCase("Y"))
 					{
 						friends.remove(generalFriend);
 						friends.add(generalFriend);
-						System.out.println("새로운 데이터를 입력했습니다.");
+						System.out.println("―――새로운 데이터를 입력했습니다.―――");
 					}
 					else
 					{
-						System.out.println("기존 데이터를 유지합니다.");
+						System.out.println("―――――기존 데이터를 유지합니다.―――――");
 					}
 				}
 				break;
@@ -113,19 +112,19 @@ public class PhoneBookManager implements SubMenuitem
 				
 				if(isFind == false)
 				{
-					System.out.println("이미 저장된 데이터입니다. ");
-					System.out.println("덮어 쓸까요? (Y/N 입력) : ");
+					System.out.println("―――――이미 저장된 데이터입니다.―――――");
+					System.out.println("――――――――――덮어 쓸까요? (Y/N 입력) : ");
 					String choice = scanner.nextLine();
 					
 					if (choice.equalsIgnoreCase("Y"))
 					{
 						friends.remove(collegeFriend);
 						friends.add(collegeFriend);
-						System.out.println("새로운 데이터를 입력했습니다.");
+						System.out.println("―――새로운 데이터를 입력했습니다.―――");
 					}
 					else
 					{
-						System.out.println("기존 데이터를 유지합니다.");
+						System.out.println("―――――기존 데이터를 유지합니다.―――――");
 					}
 				}
 				break;
@@ -147,19 +146,19 @@ public class PhoneBookManager implements SubMenuitem
 				
 				if(isFind == false)
 				{
-					System.out.println("이미 저장된 데이터입니다. ");
-					System.out.println("덮어 쓸까요? (Y/N 입력) : ");
+					System.out.println("―――――이미 저장된 데이터입니다.―――――");
+					System.out.println("――――――――――덮어 쓸까요? (Y/N 입력) : ");
 					String choice = scanner.nextLine();
 					
 					if (choice.equalsIgnoreCase("Y"))
 					{
 						friends.remove(companyFriend);
 						friends.add(companyFriend);
-						System.out.println("새로운 데이터를 입력했습니다.");
+						System.out.println("―――새로운 데이터를 입력했습니다.―――");
 					}
 					else
 					{
-						System.out.println("기존 데이터를 유지합니다.");
+						System.out.println("―――――기존 데이터를 유지합니다.―――――");
 					}
 				}
 				break;
@@ -172,7 +171,7 @@ public class PhoneBookManager implements SubMenuitem
 		boolean isFind = false;
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("검색할 이름을 입력하세요. : ");
+		System.out.print("――――――――검색할 이름을 입력하세요. : ");
 		String searchName = scanner.nextLine();
 		
 		Iterator<PhoneInfo> iterator = friends.iterator();
@@ -182,14 +181,14 @@ public class PhoneBookManager implements SubMenuitem
 			PhoneInfo friend = iterator.next();
 			if (searchName.equals(friend.name))
 			{
-				System.out.println("■■■ 요청하는 정보를 찾았습니다. ■■■");
+				System.out.println("――――요청하는 정보를 찾았습니다.――――");
 				friend.showData();
 				isFind = true;
 			}
 		}
 		if (isFind == false)
 		{
-			System.out.println("■■■■■■ 찾는 정보가 없습니다. ■■■■■■");
+			System.out.println("―――――――찾는 정보가 없습니다.―――――――");
 		}
 	}
 	
@@ -198,7 +197,7 @@ public class PhoneBookManager implements SubMenuitem
 		boolean isFind = false;
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("검색할 이름을 입력하세요. : ");
+		System.out.print("――――――――삭제할 이름을 입력하세요. : ");
 		String deleteName = scanner.nextLine();
 		
 		Iterator<PhoneInfo> iterator = friends.iterator();
@@ -209,13 +208,14 @@ public class PhoneBookManager implements SubMenuitem
 			if (deleteName.equals(friend.name))
 			{
 				friends.remove(friend);
-				System.out.println("■■ 지정 데이터가 삭제되었습니다. ■■");
+				System.out.println("―――지정 데이터가 삭제되었습니다.―――");
+				
 				isFind = true;
 			}
 		}
 		if (isFind == false)
 		{
-			System.out.println("■■■■■■ 찾는 정보가 없습니다. ■■■■■■");
+			System.out.println("―――――― 찾는 정보가 없습니다. ――――――");
 		}
 	}
 	
@@ -225,16 +225,17 @@ public class PhoneBookManager implements SubMenuitem
 		{
 			friend.showData();
 		}
-		System.out.println("■■■ 전체 정보가 출력되었습니다. ■■■");
+		System.out.println("――― 전체 정보가 출력되었습니다. ―――");
 	}
 	
 	public void dataSave(AutoSaver autoSave)
 	{
-		System.out.println("■■■■ 저장 옵션 ■■■■");
-		System.out.println("■ 1.자동 저장 On  ■");
-		System.out.println("■ 2.자동 저장 Off ■");	
-		System.out.println("■■■■■■■■■■■■■■■■■■■");
-		System.out.print("옵션을 선택하세요 : ");
+		System.out.println("■■■■■■■■■■■■ 저장 옵션 ■■■■■■■■■■■■");
+		System.out.println("■         1.자동 저장 On          ■");
+		System.out.println("■         2.자동 저장 Off         ■");	
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		System.out.print("――――――――――――――――옵션을 선택하세요 : ");
+		
 		
 		Scanner scanner = new Scanner(System.in);
 		int select = scanner.nextInt();
@@ -245,21 +246,22 @@ public class PhoneBookManager implements SubMenuitem
 			{
 				autoSave.setDaemon(true);
 				autoSave.start();
-				System.out.println("자동 저장을 시작합니다.");
+				System.out.println("――――――자동 저장을 시작합니다.――――――");
+				
 			}
 			else
 			{
-				System.out.println("자동 저장이 이미 실행되었습니다.");
+				System.out.println("―――――――자동 저장 상태입니다.―――――――");
 			}
 		}
 		else if (select == autoOff)
 		{
 				autoSave.interrupt();
-				System.out.println("자동 저장을 종료합니다.");
+				System.out.println("――――――자동 저장을 종료합니다.――――――");
 		}
 		else
 		{
-			System.out.println("옵션(숫자)을 잘못 입력하였습니다.");
+			System.out.println("―옵션(숫자)을 잘못 입력하였습니다.―");
 		}
 	}
 	
@@ -277,15 +279,12 @@ public class PhoneBookManager implements SubMenuitem
 		}
 		catch (FileNotFoundException e)
 		{
-			e.printStackTrace();
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
 		}
 	}
 	public void readObj()
@@ -304,19 +303,16 @@ public class PhoneBookManager implements SubMenuitem
 					break;
 				}
 			}
-			System.out.println("데이터 정보가 복원되었습니다.");
+			System.out.println("―――데이터 정보가 복원되었습니다.―――");
 		}
 		catch (FileNotFoundException e)
 		{
-			e.printStackTrace();
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
 		}
 	}
 	public void phoneInfoText()
@@ -351,11 +347,9 @@ public class PhoneBookManager implements SubMenuitem
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
 		}
 	}
 }

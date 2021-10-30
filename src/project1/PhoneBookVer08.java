@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 import project1.ver08.PhoneBookManager;
 import project1.ver08.AutoSaver;
+import project1.ver08.MenuSelectException;
 import project1.ver08.Menuitem;
 
 public class PhoneBookVer08 implements Menuitem
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws MenuSelectException
 	{
 		PhoneBookManager phone = new PhoneBookManager(100);
 		AutoSaver autoSave = new AutoSaver(phone);
@@ -18,8 +19,8 @@ public class PhoneBookVer08 implements Menuitem
 			phone.printMenu();
 			
 			Scanner scanner = new Scanner(System.in);		
-			System.out.println("■■■■■■■■■■■■■■■■■■");
-			System.out.print("옵션을 선택하세요 : ");
+			System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			System.out.print("――――――――――――――――옵션을 선택하세요 : ");
 			int selectNum = scanner.nextInt();
 			
 			switch (selectNum)
@@ -38,7 +39,7 @@ public class PhoneBookVer08 implements Menuitem
 			{
 				phone.saveObj();
 				phone.phoneInfoText();
-				System.out.println("프로그램을 종료합니다.");
+				System.out.println("―――――――프로그램을 종료합니다―――――――");
 				return;
 			}
 			}

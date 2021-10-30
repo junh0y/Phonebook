@@ -25,7 +25,8 @@ public class PhoneInfo implements Serializable
 
 	public void showData()
 	{
-		System.out.println("■■■■ PHONE INFO ■■■■");
+		System.out.println("■■■■■■■■■■■■■■ 옵 션 ■■■■■■■■■■■■■■");
+		System.out.println("…¨ㄹ PHONE INFO ■■■■");
 		System.out.println("이    름 : " + name);
 		System.out.println("전화번호 : " + phoneNumber);
 	}
